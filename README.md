@@ -95,7 +95,7 @@ src/falseref/
     genai.py             references to generative AI tools
     citation.py          citation-quality rules, grey-literature heuristic
 ```
-
+<!---
 There are no import cycles: `pipeline → verdict → sources → matching → models`, and `references` depends only on `models`. `matching` never touches the network, which is what lets the tests run offline.
 
 ## Tests
@@ -106,3 +106,4 @@ python scripts/regression_check.py ../try_grobid.ipynb ../Re__Referencing_Mistak
 ```
 
 The regression check runs the original notebook's checker and this package on the same upload, and diffs the two reports. HTTP responses from the notebook run are recorded and replayed to the package, so any difference comes from the code. The browser is off during the check, because the notebook had none and browser traffic cannot be replayed.
+-->
